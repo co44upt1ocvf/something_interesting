@@ -21,14 +21,14 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <DatePicker Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3"/>
-        <ListBox Grid.Row="1" Grid.RowSpan="5"/>
+        <DatePicker Name="today" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" SelectedDateChanged="date"/>
+        <ListBox Name="allNotes" Grid.Row="1" Grid.RowSpan="5" DisplayMemberPath="Title" SelectionChanged="view"/>
         <TextBlock Text="Имя заметки:" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBox Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <TextBox Name="noteName" TextWrapping="Wrap" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2"/>
         <TextBlock Text="Содержание:" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBox Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2"/>
-        <Button Content="Удалить"  Grid.Row="6" Grid.Column="0"/>
-        <Button Content="Создать"  Grid.Row="6" Grid.Column="1"/>
-        <Button Content="Сохранить"  Grid.Row="6" Grid.Column="2"/>
+        <TextBox Name="description" TextWrapping="Wrap" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <Button Content="Удалить" Grid.Row="6" Grid.Column="0" Click="delete"/>
+        <Button Content="Создать" Grid.Row="6" Grid.Column="1" Click="add"/>
+        <Button Content="Редактировать" Grid.Row="6" Grid.Column="2" Click="edit"/>
     </Grid>
 </Window>

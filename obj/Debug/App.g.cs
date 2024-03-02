@@ -61,7 +61,7 @@ namespace Note {
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "4.0.0.0")]
         public static void Main() {
-            NoteParameter.App app = new NoteParameter.App();
+            Note.App app = new Note.App();
             app.InitializeComponent();
             app.Run();
         }
